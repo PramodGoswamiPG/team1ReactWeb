@@ -37,6 +37,7 @@ return (
               type="text"
               className="form-control mt-1"
               placeholder="Enter Name"
+              required
             />
           </div>
           <div className="form-group mt-1">
@@ -46,6 +47,7 @@ return (
             onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email}
             className="form-control mt-1"
             placeholder="Enter Email"
+            required
             />
              {formik.touched.email && formik.errors.email && (
             <span>{formik.errors.email}</span>
@@ -72,6 +74,7 @@ return (
               className="form-control mt-1"
               placeholder="PAN"
               maxLength={10}
+              required
              
             />
           </div>
@@ -81,13 +84,15 @@ return (
               type="text"
               className="form-control mt-1"
               placeholder="GST"
+              maxLength={10}
+              required
               
             />
           </div>
 
           <div className="form-group mt-1">
             <label>Enter type</label>
-            <select class="form-select" required aria-label="Default select example">
+            <select  class="form-select"  required aria-label="Default select example">
   <option selected>Select</option>
   <option value="1">Mart</option>
   <option value="2">Outlet</option>
@@ -102,12 +107,13 @@ return (
               type="text"
               className="form-control mt-1"
               placeholder="Coupon code"
+              required
             
             />
 
            <div className="form-group mt-1">
             <label> Enter Role</label>
-            <select class="form-select"  aria-label="Default select example">
+            <select class="form-select"   required  aria-label="Default select example">
   <option selected>Select</option>
   <option value="1">Manager</option>
   <option value="2">Dealer</option>
@@ -121,6 +127,7 @@ return (
               type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required
               className="form-control mt-1"
               placeholder="Password"
+              
               
             />
           </div>
